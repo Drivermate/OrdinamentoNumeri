@@ -21,5 +21,10 @@ namespace WindowsFormsApplication1
             }
             return instance;
         }
+        private void addOrd(int val)
+        {
+            this.array[array.Length] = val;
+            Array.Sort(array);
+        }
     }
 }
