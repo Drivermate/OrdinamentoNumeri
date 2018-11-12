@@ -8,5 +8,18 @@ namespace WindowsFormsApplication1
 {
     class Vector
     {
+        private int[] array;
+        private static Vector instance = null;
+        Vector()
+        {
+        }
+        public static Vector getInstance()
+        {
+            if(instance == null)
+            {
+                instance = new Vector();
+            }
+            return instance;
+        }
     }
 }
