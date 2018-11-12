@@ -28,73 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_fine = new System.Windows.Forms.Button();
-            this.button_insert = new System.Windows.Forms.Button();
-            this.button_read = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonEsporta = new System.Windows.Forms.Button();
+            this.buttonInserisci = new System.Windows.Forms.Button();
+            this.buttonImporta = new System.Windows.Forms.Button();
+            this.listValoriArray = new System.Windows.Forms.ListBox();
+            this.textBoxValori = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button_fine
+            // buttonEsporta
             // 
-            this.button_fine.Location = new System.Drawing.Point(197, 195);
-            this.button_fine.Name = "button_fine";
-            this.button_fine.Size = new System.Drawing.Size(75, 23);
-            this.button_fine.TabIndex = 0;
-            this.button_fine.Text = "Esci";
-            this.button_fine.UseVisualStyleBackColor = true;
-            this.button_fine.Click += new System.EventHandler(this.button_fine_Click);
+            this.buttonEsporta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEsporta.Location = new System.Drawing.Point(465, 195);
+            this.buttonEsporta.Name = "buttonEsporta";
+            this.buttonEsporta.Size = new System.Drawing.Size(75, 37);
+            this.buttonEsporta.TabIndex = 0;
+            this.buttonEsporta.Text = "Esporta";
+            this.buttonEsporta.UseVisualStyleBackColor = true;
             // 
-            // button_insert
+            // buttonInserisci
             // 
-            this.button_insert.Location = new System.Drawing.Point(12, 195);
-            this.button_insert.Name = "button_insert";
-            this.button_insert.Size = new System.Drawing.Size(75, 23);
-            this.button_insert.TabIndex = 1;
-            this.button_insert.Text = "Inserisci";
-            this.button_insert.UseVisualStyleBackColor = true;
-            this.button_insert.Click += new System.EventHandler(this.button_insert_Click);
+            this.buttonInserisci.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInserisci.Location = new System.Drawing.Point(47, 195);
+            this.buttonInserisci.Name = "buttonInserisci";
+            this.buttonInserisci.Size = new System.Drawing.Size(102, 37);
+            this.buttonInserisci.TabIndex = 1;
+            this.buttonInserisci.Text = "Inserisci";
+            this.buttonInserisci.UseVisualStyleBackColor = true;
+            
             // 
-            // button_read
+            // buttonImporta
             // 
-            this.button_read.Location = new System.Drawing.Point(102, 195);
-            this.button_read.Name = "button_read";
-            this.button_read.Size = new System.Drawing.Size(75, 23);
-            this.button_read.TabIndex = 2;
-            this.button_read.Text = "Leggi";
-            this.button_read.UseVisualStyleBackColor = true;
-            this.button_read.Click += new System.EventHandler(this.button_read_Click);
+            this.buttonImporta.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonImporta.Location = new System.Drawing.Point(246, 195);
+            this.buttonImporta.Name = "buttonImporta";
+            this.buttonImporta.Size = new System.Drawing.Size(102, 37);
+            this.buttonImporta.TabIndex = 2;
+            this.buttonImporta.Text = "Importa";
+            this.buttonImporta.UseVisualStyleBackColor = true;
+            
             // 
-            // dataGridView1
+            // listValoriArray
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.listValoriArray.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listValoriArray.FormattingEnabled = true;
+            this.listValoriArray.ItemHeight = 23;
+            this.listValoriArray.Location = new System.Drawing.Point(209, 24);
+            this.listValoriArray.Name = "listValoriArray";
+            this.listValoriArray.Size = new System.Drawing.Size(159, 73);
+            this.listValoriArray.TabIndex = 3;
+            // 
+            // textBoxValori
+            // 
+            this.textBoxValori.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValori.Location = new System.Drawing.Point(190, 129);
+            this.textBoxValori.Name = "textBoxValori";
+            this.textBoxValori.Size = new System.Drawing.Size(187, 30);
+            this.textBoxValori.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button_read);
-            this.Controls.Add(this.button_insert);
-            this.Controls.Add(this.button_fine);
+            this.ClientSize = new System.Drawing.Size(586, 262);
+            this.Controls.Add(this.textBoxValori);
+            this.Controls.Add(this.listValoriArray);
+            this.Controls.Add(this.buttonImporta);
+            this.Controls.Add(this.buttonInserisci);
+            this.Controls.Add(this.buttonEsporta);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button_fine;
-        private System.Windows.Forms.Button button_insert;
-        private System.Windows.Forms.Button button_read;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonEsporta;
+        private System.Windows.Forms.Button buttonInserisci;
+        private System.Windows.Forms.Button buttonImporta;
+        private System.Windows.Forms.ListBox listValoriArray;
+        private System.Windows.Forms.TextBox textBoxValori;
     }
 }
 
