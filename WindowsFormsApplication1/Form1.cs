@@ -109,6 +109,13 @@ namespace WindowsFormsApplication1
             listValoriArray.DataSource = Vector.getInstance().getArray();
 
         }
+
+        private void buttonInserisci_Click(object sender, EventArgs e)
+        {
+            int num = Convert.ToInt32(textBoxValori.Text);
+            Vector.getInstance().addOrd(num);
+            listValoriArray.DataSource = Vector.getInstance().getArray();
+        }
         /*
 - Aldo, devi fare le funzioni di lettura scrittura da file e il vettore que usi è Vector.getInstance().getArray()
 - manca anche la funzione di evento del buttone di Aggiunta, basta usare Vector.getInstance().addOrd(numero) e hai fatto

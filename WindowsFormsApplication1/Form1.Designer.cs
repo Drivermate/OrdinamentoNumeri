@@ -54,6 +54,7 @@
             this.buttonInserisci.TabIndex = 1;
             this.buttonInserisci.Text = "Inserisci";
             this.buttonInserisci.UseVisualStyleBackColor = true;
+            this.buttonInserisci.Click += new System.EventHandler(this.buttonInserisci_Click);
             // 
             // buttonImporta
             // 
