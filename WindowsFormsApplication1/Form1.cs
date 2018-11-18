@@ -132,12 +132,6 @@ namespace WindowsFormsApplication1
             }
             
         }
-        /*
-- Aldo, devi fare le funzioni di lettura scrittura da file e il vettore que usi è Vector.getInstance().getArray()
-- manca anche la funzione di evento del buttone di Aggiunta, basta usare Vector.getInstance().addOrd(numero) e hai fatto
-- Ti chiedevo di fare la relazione perche il cavi non puo e nemmeno io :( ma qualsiasi cosa chiamami
-*/
-
 
 
 
