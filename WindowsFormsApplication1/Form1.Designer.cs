@@ -44,6 +44,7 @@
             this.buttonEsporta.TabIndex = 0;
             this.buttonEsporta.Text = "Esporta";
             this.buttonEsporta.UseVisualStyleBackColor = true;
+            this.buttonEsporta.Click += new System.EventHandler(this.buttonEsporta_Click);
             // 
             // buttonInserisci
             // 

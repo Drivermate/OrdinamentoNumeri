@@ -116,6 +116,22 @@ namespace WindowsFormsApplication1
             Vector.getInstance().addOrd(num);
             listValoriArray.DataSource = Vector.getInstance().getArray();
         }
+
+        private void buttonEsporta_Click(object sender, EventArgs e)
+        {
+
+            string path = OpenFile();
+            System.IO.File.WriteAllText(path, "");
+
+            for (int i = 0; i < Vector.getInstance().getArray().Length; i++)
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, true))
+                {
+                    file.WriteLine(Vector.getInstance().getArray()[i].ToString());
+                }
+            }
+            
+        }
         /*
 - Aldo, devi fare le funzioni di lettura scrittura da file e il vettore que usi è Vector.getInstance().getArray()
 - manca anche la funzione di evento del buttone di Aggiunta, basta usare Vector.getInstance().addOrd(numero) e hai fatto
