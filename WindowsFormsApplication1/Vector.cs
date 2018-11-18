@@ -9,13 +9,15 @@ namespace WindowsFormsApplication1
     class Vector
     {
         private int[] array;
+        private List<int> l = new List<int>();
         private static Vector instance = null;
         Vector()
         {
+            array = new int[0];
         }
         public static Vector getInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new Vector();
             }
@@ -23,7 +25,8 @@ namespace WindowsFormsApplication1
         }
         public void addOrd(int val)
         {
-            this.array[array.Length] = val;
+            l.Add(val);
+            this.array = l.ToArray();
             Array.Sort(array);
         }
         public int[] getArray()

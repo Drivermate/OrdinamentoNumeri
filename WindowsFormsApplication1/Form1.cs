@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
+
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
@@ -15,14 +15,11 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        SqlConnection con;
-        int[] V;
 
         public Form1()
         {
             InitializeComponent();
-             V = Vector.getInstance().getArray();
-            listValoriArray.DataSource = V;
+
         }
 
         public string OpenFile()
@@ -85,16 +82,17 @@ namespace WindowsFormsApplication1
                         num = System.Convert.ToInt32(line);
 
 
-                        V[i] = num;
+                        Vector.getInstance().addOrd(num);
 
 
                         i++;
                         line = sr.ReadLine();
                     }
-                    catch (Exception a){
+                    catch (Exception a)
+                    {
 
                     }
-                    
+
                 }
                 //close the file
                 sr.Close();
@@ -108,7 +106,8 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine("Executing finally block.");
             }
-            
+            listValoriArray.DataSource = Vector.getInstance().getArray();
+
         }
         /*
 - Aldo, devi fare le funzioni di lettura scrittura da file e il vettore que usi è Vector.getInstance().getArray()
