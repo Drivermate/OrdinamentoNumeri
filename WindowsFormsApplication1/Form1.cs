@@ -19,7 +19,6 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-
         }
 
         public string OpenFile()
@@ -60,7 +59,6 @@ namespace WindowsFormsApplication1
 
         private void buttonImporta_Click(object sender, EventArgs e)
         {
-
             int i = 0;
 
             String line;
@@ -76,14 +74,11 @@ namespace WindowsFormsApplication1
                 //Continue to read until you reach end of file
                 while (line != null)
                 {
-
                     try
                     {
                         num = System.Convert.ToInt32(line);
 
-
                         Vector.getInstance().addOrd(num);
-
 
                         i++;
                         line = sr.ReadLine();
@@ -92,7 +87,6 @@ namespace WindowsFormsApplication1
                     {
 
                     }
-
                 }
                 //close the file
                 sr.Close();
@@ -107,7 +101,6 @@ namespace WindowsFormsApplication1
                 Console.WriteLine("Executing finally block.");
             }
             listValoriArray.DataSource = Vector.getInstance().getArray();
-
         }
 
         private void buttonInserisci_Click(object sender, EventArgs e)
@@ -119,7 +112,6 @@ namespace WindowsFormsApplication1
 
         private void buttonEsporta_Click(object sender, EventArgs e)
         {
-
             string path = OpenFile();
             System.IO.File.WriteAllText(path, "");
 
@@ -132,10 +124,5 @@ namespace WindowsFormsApplication1
             }
             
         }
-
-
-
-
-
     }
 }
