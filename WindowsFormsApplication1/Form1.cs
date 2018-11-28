@@ -21,6 +21,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            Application.Exit();
+        }
+
         public string OpenFile()
         {
             var fileContent = string.Empty;
@@ -121,8 +126,7 @@ namespace WindowsFormsApplication1
                 {
                     file.WriteLine(Vector.getInstance().getArray()[i].ToString());
                 }
-            }
-            
-        }
+            }         
+        }       
     }
 }
