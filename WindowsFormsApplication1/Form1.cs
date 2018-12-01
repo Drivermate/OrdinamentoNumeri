@@ -15,15 +15,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            Application.Exit();
         }
 
         public string OpenFile()
@@ -47,23 +41,28 @@ namespace WindowsFormsApplication1
             return "0";
         }
 
-        public void SaveFile(string input)
+        private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            saveFileDialog.FilterIndex = 1;
-            saveFileDialog.RestoreDirectory = true;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string name = saveFileDialog.FileName;
-                File.WriteAllText(name, input);
-            }
+            rtb.Clear();
         }
 
-        private void buttonImporta_Click(object sender, EventArgs e)
+        private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void apriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*OpenFileDialog z = new OpenFileDialog();
+            z.Filter = "Text Files (.txt)|*.txt";
+            z.Title = "Open a file..";
+            if (z.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.StreamReader s = new System.IO.StreamReader(z.FileName);
+                rtb.Text = s.ReadToEnd();
+                s.Close();
+            }*/
+
             int i = 0;
 
             String line;
@@ -88,10 +87,7 @@ namespace WindowsFormsApplication1
                         i++;
                         line = sr.ReadLine();
                     }
-                    catch (Exception a)
-                    {
-
-                    }
+                    catch { }
                 }
                 //close the file
                 sr.Close();
@@ -105,28 +101,35 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine("Executing finally block.");
             }
-            listValoriArray.DataSource = Vector.getInstance().getArray();
+            //listValoriArray.DataSource = Vector.getInstance().getArray();
+            rtb.Container= Vector.Equals().
+
         }
 
-        private void buttonInserisci_Click(object sender, EventArgs e)
+        private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int num = Convert.ToInt32(textBoxValori.Text);
-            Vector.getInstance().addOrd(num);
-            listValoriArray.DataSource = Vector.getInstance().getArray();
-        }
-
-        private void buttonEsporta_Click(object sender, EventArgs e)
-        {
-            string path = OpenFile();
-            System.IO.File.WriteAllText(path, "");
-
-            for (int i = 0; i < Vector.getInstance().getArray().Length; i++)
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.Filter = "Text Files (.txt)|*.txt";
+            svf.Title = "Save file..";
+            if (svf.ShowDialog() == DialogResult.OK)
             {
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, true))
-                {
-                    file.WriteLine(Vector.getInstance().getArray()[i].ToString());
-                }
-            }         
-        }       
+                System.IO.StreamWriter a = new System.IO.StreamWriter(svf.FileName);
+                a.Write(rtb.Text);
+                a.Close();
+            }
+        }
+
+        private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.Filter = "Text Files (.txt)|*.txt";
+            svf.Title = "Save file..";
+            if (svf.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.StreamWriter a = new System.IO.StreamWriter(svf.FileName);
+                a.Write(rtb.Text);
+                a.Close();
+            }
+        }
     }
 }

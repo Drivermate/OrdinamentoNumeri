@@ -1,0 +1,96 @@
+[33mcommit 66b09965b5c913a7182218870adf1539aca20507[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: DaHShoT <michaelcavicchioli.informatica@gmail.com>
+Date:   Wed Nov 28 14:36:59 2018 +0100
+
+    UpdateSplashScreen
+
+[33mcommit 0e6e599cedb45dd4e48dac9b5f19499f81499bb1[m
+Author: DaHShoT <michaelcavicchioli.informatica@gmail.com>
+Date:   Tue Nov 27 22:37:09 2018 +0100
+
+    SplashScreen
+
+[33mcommit 5dad55fe07beb2013b4cd63b10ace5a64693b9d6[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Drivermate <lorenzoaldobrandi00@gmail.com>
+Date:   Sun Nov 18 23:41:08 2018 +0100
+
+    Rimossi alcuni commenti obsoleti
+
+[33mcommit 69dfad451007d2f4f381ec47ee970d61f5fccc4f[m
+Author: Drivermate <lorenzoaldobrandi00@gmail.com>
+Date:   Sun Nov 18 23:34:30 2018 +0100
+
+    Esportazione numeri
+
+[33mcommit f77e1f19b9b093d80ee87f509b565725ce281eef[m
+Author: Drivermate <lorenzoaldobrandi00@gmail.com>
+Date:   Sun Nov 18 23:20:07 2018 +0100
+
+    Inserimento numeri
+
+[33mcommit f6b4ffcb4ed25b6b6059eb473e299bb4519575c1[m
+Author: Drivermate <lorenzoaldobrandi00@gmail.com>
+Date:   Sun Nov 18 23:17:53 2018 +0100
+
+    Import da file
+
+[33mcommit 0eb4f92f406a8a423ef5d3a3757333296525cff4[m
+Author: Drivermate <lorenzoaldobrandi00@gmail.com>
+Date:   Sun Nov 18 21:34:05 2018 +0100
+
+    Provvisorio
+
+[33mcommit 915d09232e7e54f87895af2d5d62e7d7dec735c6[m
+Author: Lorenzo Bianchi <lorenzo.bianchi0210gmail.com>
+Date:   Sun Nov 18 17:50:54 2018 +0100
+
+    Aggiunta di informazione e risoluzioni di errori
+
+[33mcommit 4ae5816e9aebd7b3843bc7a08149a5ec3b4b11a6[m
+Author: Lorenzo Bianchi <lorenzo.bianchi0210@gmail.com>
+Date:   Mon Nov 12 10:45:42 2018 +0100
+
+    Add ordinato
+
+[33mcommit 6988ee491c6ac07b5abc1ebd86173c391f419b08[m
+Author: Lorenzo Bianchi <lorenzo.bianchi0210@gmail.com>
+Date:   Mon Nov 12 10:25:26 2018 +0100
+
+    Delete Database.mtf  e aggiunta initialize component
+
+[33mcommit b1f5f950920d16f1319a0a7db4307c6687d4fd61[m
+Merge: fa0749e 74aa521
+Author: Lorenzo Bianchi <lorenzo.bianchi0210@gmail.com>
+Date:   Mon Nov 12 10:18:22 2018 +0100
+
+    Merge branch 'master' of https://github.com/Drivermate/OrdinamentoNumeri
+
+[33mcommit fa0749ebf831de7978080025108064b9d5e32b63[m
+Author: Lorenzo Bianchi <lorenzo.bianchi0210@gmail.com>
+Date:   Mon Nov 12 10:05:16 2018 +0100
+
+    Implementazione Singleton sulla classe Vector
+
+[33mcommit 74aa521129f926a6829cbb4754e6d21fbcf113b4[m
+Author: AndreaCavicchioli <andrea.17.cavicchioli@gmail.com>
+Date:   Mon Nov 12 09:59:08 2018 +0100
+
+    Creazione Interfaccia Grafica
+
+[33mcommit 963ba69164567db79864623669b13e566faab16d[m
+Author: Lorenzo Bianchi <lorenzo.bianchi0210@gmail.com>
+Date:   Mon Nov 12 09:43:11 2018 +0100
+
+    Creazione classe Vector
+
+[33mcommit c0f7db8980ccae4503402dd1ef79ade0c1f6a113[m
+Author: Lorenzo_Aldobrandi <aldobrandi.lorenzo@itismeucci.com>
+Date:   Mon Nov 12 09:35:45 2018 +0100
+
+    Aggiunta .gitignore
+
+[33mcommit 7b5c6cd8bd02fefafb8e23f4c75b30a3361aaef6[m
+Author: Lorenzo_Aldobrandi <aldobrandi.lorenzo@itismeucci.com>
+Date:   Mon Nov 12 09:17:59 2018 +0100
+
+    Primo commit
