@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -41,9 +42,24 @@ namespace WindowsFormsApplication1
             return "0";
         }
 
+        public void SaveFile(string input)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog.FilterIndex = 1;
+            saveFileDialog.RestoreDirectory = true;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string name = saveFileDialog.FileName;
+                File.WriteAllText(name, input);
+            }
+        }
+
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rtb.Clear();
+            rtb.Text = "";
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,18 +67,14 @@ namespace WindowsFormsApplication1
             Application.Exit();
         }
 
+        protected override void OnClosed(EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void apriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*OpenFileDialog z = new OpenFileDialog();
-            z.Filter = "Text Files (.txt)|*.txt";
-            z.Title = "Open a file..";
-            if (z.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.StreamReader s = new System.IO.StreamReader(z.FileName);
-                rtb.Text = s.ReadToEnd();
-                s.Close();
-            }*/
-
+            Vector.getInstance().clear();
             int i = 0;
 
             String line;
@@ -87,7 +99,7 @@ namespace WindowsFormsApplication1
                         i++;
                         line = sr.ReadLine();
                     }
-                    catch { }
+                    catch (Exception a) { }
                 }
                 //close the file
                 sr.Close();
@@ -102,34 +114,21 @@ namespace WindowsFormsApplication1
                 Console.WriteLine("Executing finally block.");
             }
             //listValoriArray.DataSource = Vector.getInstance().getArray();
-            rtb.Container= Vector.Equals().
 
+            string str = "";
+            foreach (int b in Vector.getInstance().getArray()) str += Convert.ToString(b) + "\n";
+
+            rtb.Text = str;
         }
 
         private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog svf = new SaveFileDialog();
-            svf.Filter = "Text Files (.txt)|*.txt";
-            svf.Title = "Save file..";
-            if (svf.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.StreamWriter a = new System.IO.StreamWriter(svf.FileName);
-                a.Write(rtb.Text);
-                a.Close();
-            }
+            SaveFile(rtb.Text);
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog svf = new SaveFileDialog();
-            svf.Filter = "Text Files (.txt)|*.txt";
-            svf.Title = "Save file..";
-            if (svf.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.StreamWriter a = new System.IO.StreamWriter(svf.FileName);
-                a.Write(rtb.Text);
-                a.Close();
-            }
+            SaveFile(rtb.Text);
         }
     }
 }

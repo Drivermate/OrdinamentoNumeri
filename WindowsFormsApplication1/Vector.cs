@@ -15,6 +15,10 @@ namespace WindowsFormsApplication1
         {
             array = new int[0];
         }
+        public void clear()
+        {
+            this.l.Clear();
+        }
         public static Vector getInstance()
         {
             if (instance == null)
